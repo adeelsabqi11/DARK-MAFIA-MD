@@ -7,7 +7,7 @@
                font-weight: bold;">
                
   <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    <h5> ✨ 𝐃ᴀʀᴋ 𝐌ᴀғɪᴀ 𝐌ᴅ ✨ </h5>
+    <h1> ✨ 𝐃ᴀʀᴋ 𝐌ᴀғɪᴀ 𝐌ᴅ ✨ </h1>
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
@@ -19,3 +19,5 @@
    <span style="color:#00FFFF">مــــؔــــافـــــؔــیــــا عــؔــدیــؔـــــل</span> 
 </h2>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=70&pause=500&color=8A2BE2&center=true&width=1150&height=200&lines=PLEASE-FORK-STAR-BOT-REPO" alt="Typing SVG" /></a>
+  </div>
