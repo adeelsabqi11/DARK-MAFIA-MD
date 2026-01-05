@@ -1,12 +1,12 @@
 {
-  "name": "FAIZAN-MD",
+  "name": "DARKMAFIA-MD",
   "version": "5.0.0",
-  "description": "A WhatsApp Bot Created By FAIZAN-MD",
+  "description": "A WhatsApp Bot Created By DARK-MAFIA-MD",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name FAIZAN-MD",
-    "stop": "pm2 stop FAIZAN-MD",
-    "restart": "pm2 restart FAIZAN-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name DARK-MAFIA-MD",
+    "stop": "pm2 stop DARK-MAFIA-MD",
+    "restart": "pm2 restart DARK-MAFIA-MD"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "7.0.0-rc.9",
