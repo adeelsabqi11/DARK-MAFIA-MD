@@ -7,7 +7,7 @@
                font-weight: bold;">
                
   <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    ✨ 𝐃ᴀʀᴋ 𝐌ᴀғɪᴀ 𝐌ᴅ ✨
+    <h2> ✨ 𝐃ᴀʀᴋ 𝐌ᴀғɪᴀ 𝐌ᴅ ✨ </h2>
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
