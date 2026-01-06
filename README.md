@@ -8,10 +8,9 @@
                
   <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
     <h1></h1> align="center">
-   <span style="color:#00CC66">𝐃ᴀʀᴋ-𝐌ᴀғɪᴀ-𝐌ᴅ</span> 
-</h1>
+   
 <h2 align="center">
-   <span style="color:#00FFFF">مــــؔــــافـــــؔــیــــا عــؔــدیــؔـــــل</span> 
+   <span style="color:#00FFFF">𝐃ᴀʀᴋ 𝐌ᴀғɪᴀ 𝐌ᴅ</span> 
 </h2>
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
