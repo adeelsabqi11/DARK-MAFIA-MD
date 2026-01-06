@@ -19,4 +19,9 @@
 </h2>
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=00FF00&center=true&width=810&height=100&lines=+MAFIA-ADEEL" alt="Typing SVG" /></a>
   </p>
+  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+  
+  <h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000000&center=true&vCenter=true&width=600&lines=⚡+EDITH+MD+BETTER+OPTION;❤️‍🩹+THE+MOST+POWERFUL+WHATSAPP+BOT;📌+DEVELOPER+BY+MAFIA+ADEEL;💪+DARK+MAFIA-MD+SOLUTIONS;✔️+FAST+🫣+SECURE+🔒+RELIABLE+✅" alt="Typing Animation">
+</h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
