@@ -27,8 +27,11 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=00FF00&center=true&width=810&height=100&lines=+𝐂𝐋𝐈𝐂𝐊+𝐏𝐀𝐈𝐑+𝐂𝐎𝐃𝐄+𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄" alt="Typing SVG" /></a>
-  </p>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+  
+  <h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000F0&center=true&vCenter=true&width=600&lines=𝐌𝐀𝐅𝐈𝐀" alt="Typing Animation">
+</h1>
 <p align="center">
   <a href="https://fzi-47d2ff678688.herokuapp.com/pair">
 <p align="center">
