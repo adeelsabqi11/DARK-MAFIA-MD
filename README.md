@@ -44,6 +44,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000F0&center=true&vCenter=true&width=600&lines=💥Click+above+button+to+generate+your+Session+ID+(required+for+deployment)"
 </h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   
   <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=Of00&background=000F0&center=true&vCenter=true&width=600&lines=♻️ᗪᗴᑭᒪOY+ᗷOT+👇" alt="Typing Animation">
@@ -57,6 +58,6 @@
 </p>
  </h1>
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000F0&center=true&vCenter=true&width=600&lines=DEPLOY+YOUR+BOT+(HEROKU)"
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=Of00&background=000F0&center=true&vCenter=true&width=600&lines=DEPLOY+YOUR+BOT+(HEROKU)"
 </h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
