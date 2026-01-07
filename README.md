@@ -43,9 +43,12 @@
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000F0&center=true&vCenter=true&width=600&lines=💥Click+above+button+to+generate+your+Session+ID+(required+for+deployment)"
 </h1>
-<h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=FF00&background=000F0&center=true&vCenter=true&width=600&lines=♻️ᗪᗴᑭᒪOY+ᗷOT" alt="Typing Animation">
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+  
+  <h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&color=00FF00&background=000F0&center=true&vCenter=true&width=600&lines=♻️ᑕᒪIᑕK+ᑭᗩIᖇ+ᑕOᗪᗴ+👇" alt="Typing Animation">
 </h1>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   <h1>
 <p align="center">
   <a href="https://dashboard.heroku.com/new?template=https://github.com/adeelsabqi11/DARK-MAFIA-MD">
