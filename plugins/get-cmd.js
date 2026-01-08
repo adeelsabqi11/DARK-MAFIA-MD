@@ -39,19 +39,19 @@ ${truncatedCode}
 \`\`\`
 ╰──────────⊷  
 ⚡ Full file sent below 📂  
-Powered By *𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃* 💜`;
+📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ`;
 
         // Send image with truncated source code
         await conn.sendMessage(from, { 
-            image: { url: `https://files.catbox.moe/l8psgf.jpg` },  // Image URL
+            image: { url: `https://files.catbox.moe/15z65y.jpg` },  // Image URL
             caption: formattedCode,
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363418906972955@newsletter',
-                    newsletterName: '𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃',
+                    newsletterJid: '120363407804667405@newsletter',
+                    newsletterName: 'ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ',
                     serverMessageId: 143
                 }
             }
