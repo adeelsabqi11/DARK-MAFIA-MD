@@ -1,14 +1,14 @@
 const { cmd } = require('../command');
 
-// FAIZAN-MD name styles (rotate)
+// DARK-MAFIA-MD name styles (rotate)
 const nameStyles = [
-    "𝒇𝒂𝒊𝒛𝒂𝒏-𝒎𝒅",
-    "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
-    "ғᴀɪᴢᴀɴ-ᴍᴅ",
-    "𝙵𝙰𝙸𝚉𝙰𝙽-𝙼𝙳",
-    "𝓕𝓪𝓲𝔃𝓪𝓷-𝓜𝓓",
-    "𝔉𝔞𝔦𝔷𝔞𝔫-𝔐𝔡",
-    "𝕱𝖆𝖎𝖟𝖆𝖓-𝕸𝕯"
+    "ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ",
+    "ᴅᴀʀᴋ-ᴍᴀғɪᴀ-ᴍᴅ",
+    "𝐃𝐀𝐑𝐊-𝐌𝐀𝐅𝐈𝐀-𝐌𝐃",
+    "𝐃ᴀʀᴋ-𝐌ᴀғɪᴀ-𝐌𝙳",
+    "𝙳𝙰𝚁𝙺-𝙼𝙰𝙵𝙸𝙰-𝙼𝙳",
+    "ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ",
+    "ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ"
 ];
 
 let nameIndex = 0;
@@ -16,7 +16,7 @@ let nameIndex = 0;
 cmd({
     pattern: "ping",
     alias: ["speed"],
-    desc: "Stylish ping with rotating FAIZAN-MD name",
+    desc: "Stylish ping with rotating DARK-MAFIA-MD name",
     category: "main",
     react: "⚡",
     filename: __filename
