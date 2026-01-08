@@ -89,7 +89,7 @@ cmd({
 
     } catch (e) {
         console.log("[DRAMA CMD ERROR]", e?.message || e);
-        const footer = "- _𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝙳🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕_";
+        const footer = "- _📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ_";
         await sock.sendMessage(from, { text: `❌ Download failed!\nError: ${e?.message || 'Unknown error'}\n\n${footer}` }, { quoted: message });
     }
 });
