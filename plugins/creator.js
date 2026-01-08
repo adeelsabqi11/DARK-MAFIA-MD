@@ -13,10 +13,10 @@ async (conn, mek, m, { from, sender, reply }) => {
     try {
         // Owner information (you can modify these values)
         const ownerInfo = {
-            name: "𝐍𝐎𝐌𝐈-𝐈𝐍𝐗𝐈𝐃𝐄",
+            name: "𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ",
             number: "+923235906096",
-            photo: "https://files.catbox.moe/l8psgf.jpg",
-            bio: "The creator of this amazing bot"
+            photo: "https://files.catbox.moe/l0p5pt.jpg",
+            bio: "ᗪᗩᑎᘜᖇOᑌՏ ᗰᗩᖴIᗩ KIᑎᘜ 👑 ᗰᗩᖴIᗩ ᗩᗪᗴᗴᒪ"
         };
 
         // Beautiful formatted message
@@ -48,7 +48,7 @@ async (conn, mek, m, { from, sender, reply }) => {
     } catch (e) {
         console.error("Creator Command Error:", e);
         // Fallback text if image fails
-        await reply(`👑 *Creator Info*\n\nName: 𝐍𝐎𝐌𝐈-𝐈𝐍𝐗𝐈𝐃𝐄\nNumber: +923235906096\n\nContact for bot support!`);
+        await reply(`👑 *Creator Info*\n\nName: ᗰᗩᖴIᗩ-ᗩᗪᗴᗴᒪ\nNumber: +923348585489\n\nContact for bot support!`);
     }
 });
 
