@@ -1,93 +1,90 @@
+const { cmd } = require("../command");
 const axios = require('axios');
-const os = require('os');
 const fs = require('fs');
-const path = require('path');
-const { cmd, commands } = require('../command');
-const { runtime } = require('../lib/functions');
+const path = require("path");
+const AdmZip = require("adm-zip");
+const { setCommitHash, getCommitHash } = require('../data/updateDB');
 
 cmd({
-  pattern: 'version',
-  alias: ["changelog", "cupdate", "checkupdate"],
-  react: '🚀',
-  desc: "Check bot's version, system stats, and update info.",
-  category: 'info',
-  filename: __filename
-}, async (conn, mek, m, {
-  from, sender, pushname, reply
-}) => {
-  try {
-    // Read local version data
-    const localVersionPath = path.join(__dirname, '../data/version.json');
-    let localVersion = 'Unknown';
-    let changelog = 'No changelog available.';
-    if (fs.existsSync(localVersionPath)) {
-      const localData = JSON.parse(fs.readFileSync(localVersionPath));
-      localVersion = localData.version;
-      changelog = localData.changelog;
-    }
+    pattern: "update",
+    alias: ["upgrade", "sync"],
+    react: '🆕',
+    desc: "Update the bot to the latest version.",
+    category: "misc",
+    filename: __filename
+}, async (client, message, args, { reply, isOwner }) => {
+    if (!isOwner) return reply("This command is only for the bot owner.");
 
-    // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/Faizan-MD007/Faizan-MD/main/data/version.json';
-    let latestVersion = 'Unknown';
-    let latestChangelog = 'No changelog available.';
     try {
-      const { data } = await axios.get(rawVersionUrl);
-      latestVersion = data.version;
-      latestChangelog = data.changelog;
-    } catch (error) {
-      console.error('Failed to fetch latest version:', error);
-    }
+        await reply("🔍 Checking for DARK-MAFIA-MD updates...");
 
-    // Count total plugins
-    const pluginPath = path.join(__dirname, '../plugins');
-    const pluginCount = fs.readdirSync(pluginPath).filter(file => file.endsWith('.js')).length;
+        // Fetch the latest commit hash from GitHub
+        const { data: commitData } = await axios.get("https://api.github.com/repos/adeelsabqi11/DARK-MAFIA-MD/commits/main");
+        const latestCommitHash = commitData.sha;
 
-    // Count total registered commands
-    const totalCommands = commands.length;
+        // Get the stored commit hash from the database
+        const currentHash = await getCommitHash();
 
-    // System info
-    const uptime = runtime(process.uptime());
-    const ramUsage = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
-    const totalRam = (os.totalmem() / 1024 / 1024).toFixed(2);
-    const hostName = os.hostname();
-    const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
-
-    // GitHub stats
-    const githubRepo = 'https://github.com/Faizan-MD-BOTZ/Faizan-Ai';
-
-    // Check update status
-    let updateMessage = `✅ Your 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 bot is up-to-date!`;
-    if (localVersion !== latestVersion) {
-      updateMessage = `🚀 Your 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 bot is outdated!
-🔹 *Current Version:* ${localVersion}
-🔹 *Latest Version:* ${latestVersion}
-
-Use *.update* to update.`;
-    }
-
-    const statusMessage = `🌟 *Good ${new Date().getHours() < 12 ? 'Morning' : 'Night'}, ${pushname}!* 🌟\n\n` +
-      `📌 *Bot Name:* FAIZAN-MD\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
-      `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
-      `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃](https://github.com/Faizan-MD-BOTZ/Faizan-Ai)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
-
-    // Send the status message with an image
-    await conn.sendMessage(from, {
-      image: { url: 'https://files.catbox.moe/ejufwa.jpg' },
-      caption: statusMessage,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363421896999345@newsletter',
-          newsletterName: '𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃',
-          serverMessageId: 143
+        if (latestCommitHash === currentHash) {
+            return reply("✅ Your MAFIA-MD bot is already up-to-date!");
         }
-      }
-    }, { quoted: mek });
-  } catch (error) {
-    console.error('Error fetching version info:', error);
-    reply('❌ An error occurred while checking the bot version.');
-  }
+
+        await reply("🚀 Updating MAFIA-MD Bot...");
+
+        // Download the latest code
+        const zipPath = path.join(__dirname, "latest.zip");
+        const { data: zipData } = await axios.get("https://github.com/adeelsabqi11/DARK-MAFIA-MD/archive/main.zip", { responseType: "arraybuffer" });
+        fs.writeFileSync(zipPath, zipData);
+
+        // Extract ZIP file
+        await reply("📦 Extracting the latest code...");
+        const extractPath = path.join(__dirname, 'latest');
+        const zip = new AdmZip(zipPath);
+        zip.extractAllTo(extractPath, true);
+
+        // Copy updated files, preserving config.js and app.json
+        await reply("🔄 Replacing files...");
+        const sourcePath = path.join(extractPath, "MAFIA-MD-main");
+        const destinationPath = path.join(__dirname, '..');
+        copyFolderSync(sourcePath, destinationPath);
+
+        // Save the latest commit hash to the database
+        await setCommitHash(latestCommitHash);
+
+        // Cleanup
+        fs.unlinkSync(zipPath);
+        fs.rmSync(extractPath, { recursive: true, force: true });
+
+        await reply("✅ Update complete! Restarting the bot...");
+        process.exit(0);
+    } catch (error) {
+        console.error("Update error:", error);
+        return reply("❌ Update failed. Please try manually.");
+    }
 });
+
+// Helper function to copy directories while preserving config.js and app.json
+function copyFolderSync(source, target) {
+    if (!fs.existsSync(target)) {
+        fs.mkdirSync(target, { recursive: true });
+    }
+
+    const items = fs.readdirSync(source);
+    for (const item of items) {
+        const srcPath = path.join(source, item);
+        const destPath = path.join(target, item);
+
+        // Skip config.js and app.json
+        if (item === "config.js" || item === "app.json") {
+            console.log(`Skipping ${item} to preserve custom settings.`);
+            continue;
+        }
+
+        if (fs.lstatSync(srcPath).isDirectory()) {
+            copyFolderSync(srcPath, destPath);
+        } else {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    }
+}
+  
