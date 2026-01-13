@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['9231316131251']
+  const ownerNumber = ['923348585489']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -150,7 +150,7 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*Hello there ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ WhatsApp Bot.\n\n *Thanks for using ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ\ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbCDC5M3wtbG50hWK83w\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/adeelsabqi11/DARK-MAFIA-MD\n\n>📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ\ud83d\udda4`;
+  let up = `*Hello there DARK-MAFIA-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet DARK-MAFIA-MD WhatsApp Bot.\n\n *Thanks for using DARK-MAFIA\ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbCDC5M3wtbG50hWK83w\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/adeelsabqi11/DARK-MAFIA-MD\n\n>📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ\ud83d\udda4`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/15z65y.jpg` }, caption: up })
   }
   })
@@ -287,7 +287,7 @@ let isCreator = [udp, ...qadeer, ...dev]
 				}
  //================ownerreact==============
     
-if (senderNumber.includes("ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ") && !isReact) {
+if (senderNumber.includes("DARK-MAFIA-AI") && !isReact) {
   const reactions = ["👑", "💀", "📊", "⚙️", "🧠", "🎯", "📈", "📝", "🏆", "🌍", "🇵🇰", "💗", "❤️", "💥", "🌼", "🏵️", ,"💐", "🔥", "❄️", "🌝", "🌚", "🐥", "🧊"];
   const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
   m.react(randomReaction);
@@ -322,7 +322,7 @@ if (!isReact && config.AUTO_REACT === 'true') {
 // custum react settings        
                         
 // Custom React for all messages (public and owner)
-if (!isReact && config.CUSTOM_REACT === 'false') {
+if (!isReact && config.CUSTOM_REACT === 'true') {
     // Use custom emojis from the configuration (fallback to default if not set)
     const reactions = (config.CUSTOM_REACT_EMOJIS || '🥲,😂,👍🏻,🙂,😔').split(',');
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
@@ -453,7 +453,7 @@ if (!isReact && config.CUSTOM_REACT === 'false') {
     * @param {*} options
     * @returns
     */
-    //===================================
+    //========================================
     conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                   let mime = '';
                   let res = await axios.head(url)
@@ -808,10 +808,10 @@ if (!isReact && config.CUSTOM_REACT === 'false') {
   }
   
   app.get("/", (req, res) => {
-  res.send("ᗪᗩᖇK-ᗰᗩᖴIᗩ-ᗰᗪ STARTED ✅");
+  res.send("DARK-MAFIA-MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
   connectToWA()
   }, 4000);
-        
+											
